@@ -1,0 +1,22 @@
+{
+  "name": "learnbasic",
+  "version": "1.0.0",
+  "description": "this is basic app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "node"
+  ],
+  "author": "edureka",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.18.3",
+    "zone.js": "^0.8.29"
+  },
+  "devDependencies": {
+    "typing": "^0.1.9"
+  }
+}
