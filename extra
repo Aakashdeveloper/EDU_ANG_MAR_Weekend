@@ -97,3 +97,45 @@ angular.json ==> main.ts => app.module => app.component
 
 
 https://github.com/Aakashdeveloper/EDU_ANG_MAR_Weekend
+
+//One Way Binding
+-- Data Binding  {{}}
+-- Property Binding []
+-- Event Binding ()
+//Two Way Binding [()]
+
+
+////////////
+String ="dtht" "544" "true" 'tiuy'
+Number= 897 78 898 89  897.897
+Boolean= true/ false
+any[]
+
+[78,678,67,8546]
+["ds","g", "dfg", "gd"]
+["dgd",436,4,6,6,"dfg",true,"hf",54,"fh"]
+
+/////////
+*ngFor
+*ngIf
+
+
+var a  = 10
+var a
+a=10
+
+var = redeclare & reassign
+let = cannot redeclare & but can reassign
+const  = n redeclaration & nor reassign
+
+
+var a = 10
+undefined
+a>10?'yes':'no'
+"no"
+a==10?'yes':'no'
+"yes"
+
+https://www.w3schools.com/jsref/jsref_filter.asp
+https://www.w3schools.com/jsref/jsref_map.asp
+https://www.w3schools.com/jsref/jsref_indexof.asp
