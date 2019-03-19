@@ -139,3 +139,36 @@ a==10?'yes':'no'
 https://www.w3schools.com/jsref/jsref_filter.asp
 https://www.w3schools.com/jsref/jsref_map.asp
 https://www.w3schools.com/jsref/jsref_indexof.asp
+
+
+//////
+uppercase
+lowercase
+currency
+percantage
+date
+titlecase
+
+/////////////////////////
+function add(a,b){
+    return a+b
+}
+
+const add = (a,b) => { return a+b }
+
+
+///
+Pipe
+cutsome Pipe
+indexof
+filter
+twoway Binding
+CSS
+ngstyle
+ngclass
+search
+model
+
+
+https://ngapi4.herokuapp.com/api/getProducts
+https://ngmovies.herokuapp.com/api/getMovies
