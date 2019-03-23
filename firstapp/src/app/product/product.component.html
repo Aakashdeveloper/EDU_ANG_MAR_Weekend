@@ -4,7 +4,7 @@
 </h3>
 <div class="panel panel-primary">
     <div class="panel-heading">
-        Product App
+        {{mainHeading}}
     </div>
     <div class="panel-body">
         <div class="row">
@@ -16,6 +16,7 @@
             </div>
         </div>
         <h4>{{userInput}}</h4>
+        <h4>loacalval{{localval}}</h4>
         <div class="row">
             <div class="col-md-6">
                 <h4>{{OutStr}}{{(products | filterProduct:userInput).length}}</h4>
@@ -44,6 +45,7 @@
                        
                         <td>
                             <img [src]="product.imageUrl"
+                            [style.width.px]="imageWidth"
                             *ngIf="showImage"/>
                         </td>
                         <td style="color:brown">{{product.productName | MyUpper:'upper'}}</td>
@@ -52,7 +54,10 @@
                         <td [ngStyle]="{'background-color':product.price<20?'slateblue':'palevioletred'}">
                             {{product.price | discount:'10' | currency:'GBP' }}
                         </td>
-                        <td>{{product.starRating}}</td>
+                        <td>
+                            <app-star [rating]="product.starRating"
+                                (ratingClicked)="onDataRecieve($event)"></app-star>
+                        </td>
                     </tr>
                 </tbody>
             </table>

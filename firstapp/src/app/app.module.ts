@@ -1,19 +1,30 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-import { BookComponent } from './book.component';
-import { ProductComponent } from './product/product.component';
+// Pipes
 import { MyUpperPipe } from './product/nameUpper.pipe';
 import { DiscountPipe } from './product/discount.pipe';
 import { ProductSearch } from './product/productSearch.pipe';
+
+// components
+import { AppComponent } from './app.component';
+import { BookComponent } from './book.component';
+import { ProductComponent } from './product/product.component';
+import { StarComponent } from './shared/star.component';
+
+// Service
+import { ProductService } from './product/product.service';
+
 
 @NgModule({
     // All the module declare here
     imports : [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
 
     // All the component & pipe
@@ -23,7 +34,8 @@ import { ProductSearch } from './product/productSearch.pipe';
         ProductComponent,
         MyUpperPipe,
         DiscountPipe,
-        ProductSearch
+        ProductSearch,
+        StarComponent
     ],
 
     // only first component
@@ -32,7 +44,9 @@ import { ProductSearch } from './product/productSearch.pipe';
     ],
 
     // All Service here
-    providers: []
+    providers: [
+        ProductService
+    ]
 })
 
 export class AppModule {

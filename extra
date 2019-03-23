@@ -172,3 +172,30 @@ model
 
 https://ngapi4.herokuapp.com/api/getProducts
 https://ngmovies.herokuapp.com/api/getMovies
+
+/*
+input act like attribute
+output act event
+
+var a = 10
+var b = "my age is "+a
+var c = `my age is ${a}`
+
+
+function add(a,b){
+    return a+b
+}
+function sub(a,b){
+    return a+b
+}
+function multy(a,b){
+    return a+b
+}
+add(1,2)
+sub(1,2)
+*/
+
+
+>>dependency injection 
+rather than creating itself when we from
+external source
