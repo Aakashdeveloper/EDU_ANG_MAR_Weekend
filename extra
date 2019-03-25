@@ -199,3 +199,13 @@ sub(1,2)
 >>dependency injection 
 rather than creating itself when we from
 external source
+
+
+/*
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/gitlearn.git
+git push -u origin master
+*/
