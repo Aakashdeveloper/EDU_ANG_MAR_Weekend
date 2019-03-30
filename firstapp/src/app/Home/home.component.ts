@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
+    pageTitle: String = 'Home Page';
 
 }

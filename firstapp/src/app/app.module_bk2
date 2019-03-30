@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import { ProductModule } from './product/product.module';
 
 // components
@@ -11,9 +12,6 @@ import { BookComponent } from './book.component';
 import { HomeComponent } from './Home/home.component';
 import { OrderComponent } from './orders/order.component';
 import { NotFoundComponent } from './shared/NotFound.component';
-import { AppRoutingModule } from './app-routing.module';
-import { MoviesComponent } from './movies/movies.component';
-import { MusicModuleModule } from './music/music-module.module';
 
 
 
@@ -23,9 +21,13 @@ import { MusicModuleModule } from './music/music-module.module';
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        AppRoutingModule,
-        ProductModule,
-        MusicModuleModule
+        RouterModule.forRoot([
+            {path: 'order', component: OrderComponent},
+            {path: 'home', component: HomeComponent},
+            {path: '', redirectTo: 'home', pathMatch: 'full' },
+            {path: '**', component: NotFoundComponent }
+        ]),
+        ProductModule
     ],
 
     // All the component & pipe
@@ -34,8 +36,7 @@ import { MusicModuleModule } from './music/music-module.module';
         BookComponent,
         HomeComponent,
         OrderComponent,
-        NotFoundComponent,
-        MoviesComponent
+        NotFoundComponent
     ],
 
     // only first component

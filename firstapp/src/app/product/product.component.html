@@ -23,7 +23,7 @@
             </div>
         </div>
         {{showImage}}
-        <div class="table-responsive">
+        <div class="table-responsive" *ngIf="products && products.length; else noData">
             <table class="table">
                 <thead>
                     <tr>
@@ -64,5 +64,8 @@
                 </tbody>
             </table>
         </div>
+        <ng-template #noData>
+            <img src="../../assets/loading.gif"/>
+        </ng-template>
     </div>
 </div>

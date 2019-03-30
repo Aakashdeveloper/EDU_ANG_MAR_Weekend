@@ -209,3 +209,14 @@ git commit -m "first commit"
 git remote add origin https://github.com/Aakashdeveloper/gitlearn.git
 git push -u origin master
 */
+
+cli
+ng new firstapp
+ng g c music/ ng generate component music
+ng g s musicservice
+ng g m module
+ng g p pipe
+
+///
+product app
+>>ng build --prod
