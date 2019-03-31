@@ -1,0 +1,119 @@
+
+<br/>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    Template Form
+  </div>
+  <div class="panel-body">
+    
+    <form #form="ngForm" (submit)="formSubmit(form)">
+      <div class="form-group" [class.has-error]="FirstName.invalid">
+        <label class="control-label"
+          for="fname">FirstName</label>
+          <input type="text"
+            class="form-control"
+            name="firstname"
+            [ngModel]="model.firstname"
+            (ngModelChange)="firstToUpper($event)"
+            placeholder="FirstName"
+            #FirstName="ngModel"
+            required
+            id="fname"/>
+          <div class="alert alert-danger" *ngIf="FirstName.invalid">
+            FirstName is required
+          </div>
+      </div>
+      <h3>Classes</h3>
+      <h4>{{FirstName.className}}</h4>
+      <div class="form-group">
+          <label class="control-label"
+            for="lname">LastName</label>
+            <input type="text"
+              class="form-control"
+              name="lastname"
+              [(ngModel)]="model.lastname"
+              placeholder="LastName"
+              required
+              id="lname"/>
+      </div>
+      <div class="form-group" [class.has-error]="email.invalid && email.touched">
+            <label class="control-label"
+              for="email">Email</label>
+              <input type="text"
+                class="form-control"
+                name="email"
+                [(ngModel)]="model.email"
+                placeholder="email"
+                required
+                #email="ngModel"
+                pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                id="email"/>
+                <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
+                    Please enter valid email
+                </div>
+      </div>
+      <div class="form-group" [class.has-error]="Password.invalid && Password.touched">
+              <label class="control-label"
+                for="password">Password</label>
+                <input type="password"
+                  class="form-control"
+                  name="password"
+                  [(ngModel)]="model.password"
+                  placeholder="password"
+                  required
+                  minlength="5"
+                  #Password="ngModel"
+                  id="password"/>
+                <div class="alert alert-danger" *ngIf="Password.invalid && Password.touched">
+                    Password must be of 5 char
+                </div>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"
+            name="fulltime"
+            [(ngModel)]="model.fulltime"
+            value="fulltime"/>FullTime
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio"
+            value="female"
+            [(ngModel)]="model.gender"
+            name="gender"/>
+            Female
+        </label>
+      </div>
+      <div class="radio">
+          <label>
+            <input type="radio"
+              value="male"
+              [(ngModel)]="model.gender"
+              name="gender"/>
+              Male
+          </label>
+        </div>
+      <div class="form-group" [class.has-error]="hasCodeLangError">
+        <label>Code lang</label>
+        <select class="form-control"
+          name="codelang"
+          [(ngModel)]="model.codelang"
+          (blur)="validateCodelang($event)"
+          >
+          <option value="default">Please select the lang</option>
+          <option *ngFor="let lang of langauages">
+            {{lang}}
+          </option>
+        </select>
+        <div class="alert alert-danger" *ngIf="hasCodeLangError">
+           Please select valid option
+        </div>
+      </div>
+      <button class="btn btn-success"
+              type="submit">Submit</button> &nbsp;
+      <button class="btn btn-danger"
+            type="reset">Reset</button>
+    </form>
+  </div>
+</div>

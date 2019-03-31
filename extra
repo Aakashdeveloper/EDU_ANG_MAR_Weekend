@@ -220,3 +220,7 @@ ng g p pipe
 ///
 product app
 >>ng build --prod
+
+////
+ng-pristine  ng-valid    ng-touched
+ng-dirty     ng-invalid  ng-untouched
